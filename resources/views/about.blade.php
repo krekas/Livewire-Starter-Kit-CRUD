@@ -1,3 +1,3 @@
-<x-layouts.app>
+<x-flowbite.app>
     Static about page
-</x-layouts.app>
+</x-flowbite.app>

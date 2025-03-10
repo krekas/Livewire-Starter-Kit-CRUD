@@ -2,12 +2,14 @@
 
 namespace App\Livewire\Settings;
 
+use Livewire\Attributes\Layout;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password as PasswordRule;
 use Illuminate\Validation\ValidationException;
 use Livewire\Component;
 
+#[Layout('components.flowbite.app')]
 class Password extends Component
 {
     public string $current_password = '';
