@@ -5,11 +5,11 @@
         </a>
 
         <ul class="space-y-2">
-            <x-flowbite.navbar.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</x-flowbite.navbar.item>
-            <x-flowbite.navbar.item icon="list-todo" :href="route('tasks.index')" :current="request()->routeIs('tasks.*')" wire:navigate>{{ __('Tasks') }}</x-flowbite.navbar.item>
+            <x-flowbite.navbar.item icon="home" :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</x-flowbite.navbar.item>
+            <x-flowbite.navbar.item icon="list-todo" :href="route('tasks.index')" :active="request()->routeIs('tasks.*')" wire:navigate>{{ __('Tasks') }}</x-flowbite.navbar.item>
         </ul>
         <ul class="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700">
-            <x-flowbite.navbar.item icon="notebook-text" :href="route('about')" :current="request()->routeIs('about')" wire:navigate>{{ __('About') }}</x-flowbite.navbar.item>
+            <x-flowbite.navbar.item icon="notebook-text" :href="route('about')" :active="request()->routeIs('about')" wire:navigate>{{ __('About') }}</x-flowbite.navbar.item>
         </ul>
     </div>
     <div class="hidden absolute bottom-0 left-0 justify-center p-4 space-x-4 w-full lg:flex bg-white dark:bg-gray-800 z-20 border-r border-gray-200 dark:border-gray-700">
