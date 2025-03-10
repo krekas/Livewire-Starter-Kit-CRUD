@@ -6,7 +6,7 @@
 
     <form wire:submit="login" class="flex flex-col gap-6">
         <!-- Email Address -->
-        <flux:input
+        <x-text-input
             wire:model="email"
             :label="__('Email address')"
             type="email"
@@ -18,7 +18,7 @@
 
         <!-- Password -->
         <div class="relative">
-            <flux:input
+            <x-text-input
                 wire:model="password"
                 :label="__('Password')"
                 type="password"
@@ -28,17 +28,17 @@
             />
 
             @if (Route::has('password.request'))
-                <flux:link class="absolute right-0 top-0 text-sm" :href="route('password.request')" wire:navigate>
+                <x-link class="absolute right-0 top-0 text-sm" :href="route('password.request')" wire:navigate>
                     {{ __('Forgot your password?') }}
-                </flux:link>
+                </x-link>
             @endif
         </div>
 
         <!-- Remember Me -->
-        <flux:checkbox wire:model="remember" :label="__('Remember me')" />
+        <x-checkbox id="remeber" wire:model="remember" :label="__('Remember me')" />
 
         <div class="flex items-center justify-end">
-            <flux:button variant="primary" type="submit" class="w-full">{{ __('Log in') }}</flux:button>
+            <x-button variant="primary" type="submit" class="w-full">{{ __('Log in') }}</x-button>
         </div>
     </form>
 
