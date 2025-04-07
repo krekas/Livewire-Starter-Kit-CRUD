@@ -4,27 +4,27 @@
         Create
     </flux:button>
 
-    <div class="min-w-full align-middle">
-        <table class="min-w-full divide-y divide-gray-200 border">
+    <div class="overflow-x-auto">
+        <table class="table table-zebra">
             <thead>
             <tr>
-                <th class="px-6 py-3 bg-gray-50 text-left">
-                    <span class="text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Title</span>
+                <th>
+                    Title
                 </th>
-                <th class="px-6 py-3 bg-gray-50 text-left">
+                <th>
                 </th>
             </tr>
             </thead>
 
-            <tbody class="bg-white divide-y divide-gray-200 divide-solid">
+            <tbody>
             @foreach($tasks as $task)
-                <tr class="bg-white">
-                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                <tr>
+                    <td>
                         {{ $task->title }}
                     </td>
-                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                        <flux:button :href="route('tasks.edit', $task)">Edit</flux:button>
-                        <flux:button variant="danger" wire:click="delete({{ $task->id }})" wire:confirm="Are you sure?">Delete</flux:button>
+                    <td>
+                        <x-link class="link-accent" :href="route('tasks.edit', $task)">Edit</x-link>
+                        <x-link href="#" class="link-error" wire:click="delete({{ $task->id }})" wire:confirm="Are you sure?">Delete</x-link>
                     </td>
                 </tr>
             @endforeach
