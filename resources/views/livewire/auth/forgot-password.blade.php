@@ -6,7 +6,7 @@
 
     <form wire:submit="sendPasswordResetLink" class="flex flex-col gap-6">
         <!-- Email Address -->
-        <flux:input
+        <x-mary-input
             wire:model="email"
             :label="__('Email Address')"
             type="email"
@@ -15,7 +15,7 @@
             placeholder="email@example.com"
         />
 
-        <flux:button variant="primary" type="submit" class="w-full">{{ __('Email password reset link') }}</flux:button>
+        <x-mary-button type="submit" class="w-full btn-success">{{ __('Email password reset link') }}</x-mary-button>
     </form>
 
     <div class="space-x-1 text-center text-sm text-zinc-400">

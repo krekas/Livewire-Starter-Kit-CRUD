@@ -21,9 +21,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('settings/password', Password::class)->name('settings.password');
     Route::get('settings/appearance', Appearance::class)->name('settings.appearance');
 
-    Route::get('tasks', \App\Livewire\Tasks\Index::class)->name('tasks.index');
-    Route::get('tasks/create', \App\Livewire\Tasks\Create::class)->name('tasks.create');
-    Route::get('tasks/edit/{task}', \App\Livewire\Tasks\Edit::class)->name('tasks.edit');
+    Route::get('tasks', \App\Livewire\Tasks\Index::class)->name('tasks.livewire.index');
+    Route::get('tasks/create', \App\Livewire\Tasks\Create::class)->name('tasks.livewire.create');
+    Route::get('tasks/edit/{task}', \App\Livewire\Tasks\Edit::class)->name('tasks.livewire.edit');
 
     Route::resource('laravel/tasks', TaskController::class);
 

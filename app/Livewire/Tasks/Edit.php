@@ -30,7 +30,7 @@ class Edit extends Component
 
         $this->task->update($data);
 
-        $this->redirectRoute('tasks.index');
+        $this->redirectRoute('tasks.livewire.index');
     }
 
     public function render(): View

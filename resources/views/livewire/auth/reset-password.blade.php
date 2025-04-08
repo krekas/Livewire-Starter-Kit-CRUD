@@ -6,7 +6,7 @@
 
     <form wire:submit="resetPassword" class="flex flex-col gap-6">
         <!-- Email Address -->
-        <flux:input
+        <x-mary-input
             wire:model="email"
             :label="__('Email')"
             type="email"
@@ -15,7 +15,7 @@
         />
 
         <!-- Password -->
-        <flux:input
+        <x-mary-input
             wire:model="password"
             :label="__('Password')"
             type="password"
@@ -25,7 +25,7 @@
         />
 
         <!-- Confirm Password -->
-        <flux:input
+        <x-mary-input
             wire:model="password_confirmation"
             :label="__('Confirm password')"
             type="password"
@@ -35,9 +35,9 @@
         />
 
         <div class="flex items-center justify-end">
-            <flux:button type="submit" variant="primary" class="w-full">
+            <x-mary-button type="submit" variant="primary" class="w-full">
                 {{ __('Reset password') }}
-            </flux:button>
+            </x-mary-button>
         </div>
     </form>
 </div>

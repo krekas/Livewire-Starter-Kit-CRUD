@@ -1,6 +1,6 @@
 <div>
     <form wire:submit="save" class="flex flex-col gap-6">
-        <flux:input
+        <x-mary-input
             wire:model="title"
             label="{{ __('Title') }}"
             type="text"
@@ -8,15 +8,17 @@
             required
         />
 
-        <flux:textarea
+        <x-mary-textarea
             wire:model="description"
-            label="{{ __('Description') }}"
-            name="description"
+            :label="__('Description')"
+            placeholder="Here ..."
+            hint="Max 1000 chars"
+            rows="5"
             required
         />
 
         <div>
-            <flux:button variant="primary" type="submit">{{ __('Save') }}</flux:button>
+            <x-mary-button type="submit">{{ __('Save') }}</x-mary-button>
         </div>
     </form>
 </div>

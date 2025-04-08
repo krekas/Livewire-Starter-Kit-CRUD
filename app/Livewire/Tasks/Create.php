@@ -21,7 +21,7 @@ class Create extends Component
 
         Task::create($data);
 
-        $this->redirectRoute('tasks.index');
+        $this->redirectRoute('tasks.livewire.index');
     }
 
     public function render(): View

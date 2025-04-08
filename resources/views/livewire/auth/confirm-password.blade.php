@@ -9,7 +9,7 @@
 
     <form wire:submit="confirmPassword" class="flex flex-col gap-6">
         <!-- Password -->
-        <flux:input
+        <x-mary-input
             wire:model="password"
             :label="__('Password')"
             type="password"
@@ -18,6 +18,6 @@
             :placeholder="__('Password')"
         />
 
-        <flux:button variant="primary" type="submit" class="w-full">{{ __('Confirm') }}</flux:button>
+        <x-mary-button variant="primary" type="submit" class="w-full">{{ __('Confirm') }}</x-mary-button>
     </form>
 </div>

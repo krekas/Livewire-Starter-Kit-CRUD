@@ -19,6 +19,9 @@ class Index extends Component
     public function render(): View
     {
         return view('livewire.tasks.index', [
+            'headers' => [
+                ['key' => 'title', 'label' => 'Title'],
+            ],
             'tasks' => Task::paginate(10),
         ]);
     }
